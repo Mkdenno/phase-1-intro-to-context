@@ -13,15 +13,20 @@ return testEmployee;
 }
 
 let createEmployeeRecords = function(employeeRecord) {
-    return employeeRecord.map(function(array){
+
+    return employeeRecord.map(function(array)
+    
+    {
         return createEmployeeRecord(array)
     })
 }
 
 function createTimeInEvent(empRec,dateStamp){
+
     let [date, hour] = dateStamp.split(' ')
 
     empRec.timeInEvents.push({
+        
         type: "TimeIn",
         hour: parseInt(hour, 10),
         date,
